@@ -1,0 +1,56 @@
+{
+    "name": "flexwave/wysiwyg",
+    "description": "A modern, feature-rich WYSIWYG editor package for Laravel 10+",
+    "type": "library",
+    "keywords": ["laravel", "wysiwyg", "editor", "rich-text", "flexwave"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FlexWave",
+            "email": "jorian@flexwave.nl",
+            "homepage": "https://flex-wave.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0",
+        "illuminate/filesystem": "^10.0|^11.0",
+        "illuminate/routing": "^10.0|^11.0",
+        "intervention/image": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlexWave\\Wysiwyg\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FlexWave\\Wysiwyg\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FlexWave\\Wysiwyg\\WysiwygServiceProvider"
+            ],
+            "aliases": {
+                "Wysiwyg": "FlexWave\\Wysiwyg\\Facades\\Wysiwyg"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
